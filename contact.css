@@ -1,0 +1,260 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  overflow-x: hidden;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.logo img {
+  width: 150px;
+}
+#header {
+  width: 100vw;
+  min-height: 100vh;
+  background-image: url(./images/wallpapper/IMG_9244.JPG);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 8px;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 32px 0;
+}
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 32px;
+  font-size: 18px;
+}
+.header-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  margin-top: 10px;
+  right: 10px;
+}
+.header-content h1 {
+  font-size: 60px;
+  color: white;
+  font-weight: 500;
+  animation-name: textSlide;
+  animation-duration: 2s;
+  transition: 0.4s;
+  text-shadow: 0 0 10px rgb(4, 4, 4), 0 0 20px rgb(255, 255, 255),
+    0 0 60px rgb(255, 255, 255), 0 0 80px rgb(255, 255, 255);
+}
+
+@keyframes textSlide {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.primary-btn {
+  padding: 10px 24px;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: transparent;
+  transition: all 0.3s ease;
+  animation-name: textSlide;
+  animation-duration: 6s;
+  transition: 0.4s;
+  text-shadow: 0 0 10px rgb(255, 255, 255), 0 0 20px rgb(255, 255, 255),
+    0 0 60px rgb(255, 255, 255), 0 0 80px rgb(255, 255, 255);
+}
+.primary-btn:hover {
+  background-color: rgb(97, 21, 21);
+}
+.menu-btn {
+  position: absolute;
+  right: 12px;
+  top: 16px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  width: 100px;
+  font-size: 35px;
+  height: 20px;
+  display: none;
+}
+
+/* footer styling */
+footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px;
+  align-items: center;
+  margin-top: 60px;
+}
+footer ul {
+  display: flex;
+  list-style: none;
+  gap: 8px;
+  text-shadow: 0 0 10px rgb(255, 255, 255), 0 0 20px rgb(255, 255, 255),
+    0 0 60px rgb(255, 255, 255), 0 0 80px rgb(255, 255, 255);
+}
+footer ul li a {
+  color: black;
+}
+
+/* contact style section  */
+.contatctContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  gap: 100px;
+  position: relative;
+ 
+}
+
+.input-group1 {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+.input-group2 {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.input-group3 {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+.input-group4 {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+
+button {
+  width: 331px;
+  cursor: pointer;
+}
+::placeholder {
+  padding: 15px;
+}
+
+input,
+textarea,
+button {
+  border: 1.5px solid red;
+  border-radius: 5px;
+}
+
+input:hover,
+textarea:hover,
+button:hover {
+  background-color: rgb(247, 212, 212);
+}
+
+.contactDetails {
+  border-left: 2.5px solid red;
+  padding: 20px;
+}
+.contactDetails h2 {
+  margin-bottom: 15px;
+}
+.contactDetails p {
+  margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+  #header {
+    min-height: 50vh;
+  }
+  .header-content h1 {
+    font-size: 32px;
+  }
+  nav ul {
+    position: absolute;
+    right: 0;
+    top: 0;
+    flex-direction: column;
+    background-color: rgba(97, 21, 21, 0.75);
+    width: 25%;
+    height: 55%;
+    align-items: flex-end;
+    padding: 16px;
+    padding-top: 80px;
+    margin-right: -900px;
+    transition: 0.3ms;
+  }
+  .menu-btn {
+    display: block;
+  }
+  nav ul.active {
+    margin-right: 0;
+  }
+  nav {
+    padding: 16px;
+  }
+
+  nav li {
+    border-bottom: 1px solid black;
+    width: 100%;
+    padding: 8px 16px;
+    text-align: left;
+  }
+  footer {
+    flex-direction: column;
+    margin-top: 100px;
+  }
+  #about {
+    flex-direction: column;
+  }
+  .logo img {
+    width: 100px;
+  }
+  #description {
+    flex-direction: column;
+  }
+  #slider {
+    top: -200px;
+  }
+  #description {
+    margin-top: -200px;
+  }
+  .photo-gallery {
+    display: flex;
+    flex-direction: column;
+  }
+  .top-content {
+    flex-direction: column;
+  }
+  .contatctContainer {
+    flex-direction: column;
+    border-left: none;
+    border-top: 2.5px solid red;
+  }
+}
